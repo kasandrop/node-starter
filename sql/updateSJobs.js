@@ -4,7 +4,7 @@
 // specify the update based on the user’s primary key (in this instance: 1011) rather than the user’s name.
 
 const updateSJobs = `
-
+  UPDATE Users SET lastlogin=(strftime('%s','now')) WHERE userid=1011;
 `;
 
 module.exports = { updateSJobs };

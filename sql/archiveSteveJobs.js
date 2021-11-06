@@ -4,7 +4,7 @@
 // on the user’s exact name rather than the user’s id.
 
 const archiveSteve = `
-
+UPDATE Messages  SET archive=1 WHERE userid IN (SELECT userid FROM users WHERE friendlyname="Steve Jobs");
 `;
 
 module.exports = { archiveSteve };

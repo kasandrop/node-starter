@@ -5,6 +5,13 @@
 // (for example; if today is the 2nd Feb 2021 the inserted ‘created’ date should automatically set as 2nd Dec 2020).
 
 const insertMessageBFranklin = `
-
+INSERT INTO Messages(
+  message,
+  userid,
+  archive,
+  created)
+  VALUES
+  ("I didn't fail the test. I just found 1000 ways to do it wrong.", 
+  1003, 1,strftime('%s','now','-2 months'));
 `
 module.exports = { insertMessageBFranklin };
